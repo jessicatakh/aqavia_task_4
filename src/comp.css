@@ -1,0 +1,185 @@
+body {
+  background: #ffe6f8;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 100px;
+
+}
+
+.track {
+    width: 90vw;
+    max-width: 500px;
+    height: 500px;
+    position: relative;
+    transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background: #ffb6df;
+    border-radius: 20px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: rotate(8deg) scale(1.12); */
+    transition: all 0.5s ease;
+    opacity: 0;
+
+}
+
+.center {
+  transform: translate(-50%, -50%) scale(1.35);
+  background: #ff4fa8;
+  opacity: 1;
+  z-index: 10;
+}
+
+.right {
+  transform: translate(60%, -50%) scale(0.9);
+  opacity: 0.7;
+  z-index: 5;
+}
+
+.left {
+  transform: translate(-160%, -50%) scale(0.9);
+  opacity: 0.7;
+  z-index: 5;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn {
+  padding: 18px;
+  border-radius: 50%;
+  background: #ff4fa8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.btn:hover {
+  transform: scale(1.15);
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    width: 120px;
+    height: 160px;
+    font-size: 32px;
+  }
+
+  .center {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+
+  .right {
+    transform: translate(30%, -50%) scale(0.85);
+  }
+
+  .left {
+    transform: translate(-130%, -50%) scale(0.85);
+  }
+}
+.slider-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+
+  /* bottom: 40px; */
+  top: 45%;
+  right: 25%;
+/* left:10% */
+}
+
+.nav-btn {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #e290b0cc;
+  border-radius: 18px;
+  background: transparent;
+  color: #e290b0cc;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  transition: 0.25s ease;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #ffffff22;
+  transform: rotate(28deg) scale(1.12);
+  -webkit-transform: rotate(28deg) scale(1.12);
+  -moz-transform: rotate(28deg) scale(1.12);
+  -ms-transform: rotate(28deg) scale(1.12);
+  -o-transform: rotate(28deg) scale(1.12);
+}
+
+.nav-btn:active {
+  transform: rotate(28deg) scale(0.95);
+  -webkit-transform: rotate(28deg) scale(0.95);
+  -moz-transform: rotate(28deg) scale(0.95);
+  -ms-transform: rotate(28deg) scale(0.95);
+  -o-transform: rotate(28deg) scale(0.95);
+}
+
+@media (max-width: 800px) {
+  .slider-buttons {
+    top   : 45%; 
+    right: 17%;
+    transform: translateX(50%); 
+  }}
+@media (max-width: 600px) {
+  .slider-buttons {
+    top   : 45%; 
+    right: 15%;
+    transform: translateX(50%);  
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+.card-text {
+  padding-top: 30px;
+  padding-left: 50px;
+  display: inline-block;
+  transform: rotate(25deg);
+  /*لفيهيمين*/font-size: inherit;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+}
